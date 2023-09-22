@@ -1,0 +1,1347 @@
+/* Import fonts */
+@import url("https://use.typekit.net/xya8yvm.css");
+
+/* Remove margin for whole page */
+*,
+*::before,
+*::after {
+  margin: 0;
+}
+
+/* Universal styles */
+body {
+  background-color: #fdf7f0;
+  font-family: effra-cc, sans-serif;
+}
+
+/* FRONT PAGE */
+
+/* Header */
+header {
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+  background-color: #fdf7f0;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.111);
+  transition: 0.2s ease-in-out;
+}
+
+nav {
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 20px;
+  transition: 0.5s ease-in-out;
+}
+
+nav img {
+  position: relative;
+  top: 60px;
+  width: 125px;
+  transition: 0.2s ease-in-out;
+}
+
+#mobile-dropsystem {
+  display: none;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+}
+
+#mobile-header {
+  z-index: 1000;
+  background-color: #fdf7f0;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.111);
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  position: sticky;
+  top: 0;
+}
+#mobile-header img {
+  position: relative;
+  top: 20px;
+  padding-left: 30px;
+  width: 110px;
+}
+#mobile-header i {
+  align-self: flex-end;
+  color: #7a6b3f;
+  padding: 30px;
+  font-size: 25pt;
+}
+
+/* Burgermenu */
+#burgermenu {
+  display: none;
+  transform: translateY(-100%);
+  width: 100%;
+  position: absolute;
+  overflow-y: auto;
+  transition: 0.8s ease-in-out;
+  max-height: calc(100dvh - 100px);
+}
+
+.category {
+  text-align: center;
+}
+
+.cat-title {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background-color: #fdf7f0;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.111);
+}
+.cat-title:last-of-type {
+  color: white;
+  background-color: #796b3f;
+}
+.cat-title h1 {
+  font-size: 18pt;
+  font-weight: 600;
+}
+.cat-title i {
+  font-size: 18pt;
+  position: absolute;
+  right: 25px;
+}
+
+/* Category content */
+
+.cat-content {
+  flex-direction: column;
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+.cat-content div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 15pt;
+  background-color: #f3eee7;
+}
+.cat-content div i {
+  right: 25px;
+}
+.cat-content a {
+  padding: 25px;
+  font-weight: 100;
+  color: black;
+  text-decoration: none;
+  box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.111);
+}
+
+/* Dropdown */
+.dropbtn {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: effra-cc, sans-serif;
+  font-weight: 500;
+  font-size: 12pt;
+  border: none;
+  cursor: pointer;
+  background-color: #fdf7f0;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  font-weight: 500;
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  font-size: 11pt;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.111);
+  color: black;
+  background-color: #fdf7f0;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover,
+.dropdown-content a:nth-child(even):hover {
+  background-color: #7a6b3f;
+  color: white;
+}
+.dropdown-content a:nth-child(even) {
+  background-color: #f3eee7;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#login {
+  position: relative;
+  top: 3px;
+  text-decoration: none;
+  color: white;
+  background-color: #7a6b3f;
+  padding: 3px 20px;
+  border-radius: 15px;
+  transition: 0.1s ease-in-out;
+}
+#login:hover {
+  background-color: #554c2f;
+}
+
+/* Hero section */
+#hero {
+  background-image: url(images/hero.jpg);
+  background-size: cover;
+  height: calc(100vh - 110px);
+  width: auto;
+}
+
+#overlay-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  color: white;
+  height: calc(100vh - 110px);
+  width: 35vw;
+}
+#overlay-box h1 {
+  padding-left: 10%;
+  font-size: 35pt;
+}
+#overlay-box p {
+  width: 70%;
+  font-weight: 300;
+  font-size: 15pt;
+  padding-left: 10%;
+  padding-top: 20px;
+}
+.cta {
+  text-decoration: none;
+  color: white;
+  display: block;
+  margin-top: 40px;
+  margin-left: 10%;
+  padding: 5px 30px;
+  font-size: 15pt;
+  font-weight: 900;
+  width: fit-content;
+  border-radius: 20px;
+  background-color: #7a6b3f;
+  transition: 0.2s ease-in-out;
+}
+.cta:hover {
+  background-color: #554c2f;
+}
+
+#mobile-herotext {
+  display: none;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+}
+#mobile-herotext p {
+  font-size: 12pt;
+  padding-top: 10px;
+}
+
+/* Event section */
+#events {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+#events h1 {
+  font-size: 30pt;
+  margin-bottom: 30px;
+}
+
+/* Event card */
+.event-card {
+  background-color: #beac76;
+  color: white;
+  border-radius: 20px;
+  width: 280px;
+  height: 370px;
+  overflow: hidden;
+}
+.event-card img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 70%;
+}
+
+.event-card div {
+  margin: auto;
+  width: 90%;
+}
+.event-card div h2 {
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18pt;
+}
+.event-card div a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+  height: 40px;
+  font-size: 15pt;
+  font-weight: 900;
+  color: #796b3f;
+  border-radius: 20px;
+  background-color: #fdf7f0;
+}
+
+/* Splide */
+.splide__slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* Drone video */
+#drone-video {
+  position: relative;
+  margin-top: 50px;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  z-index: -100;
+}
+
+video {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+#drone-video div {
+  /* backdrop-filter: brightness(50%); */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 80px;
+  color: white;
+  position: absolute;
+  text-align: center;
+}
+
+#drone-video h1 {
+  width: 80%;
+  align-self: center;
+  font-size: 25pt;
+  font-weight: 500;
+}
+
+#drone-video hr {
+  border: 1.5px solid white;
+  border-radius: 10px;
+  width: 50%;
+  align-self: center;
+}
+
+/* Teams section */
+#teams {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  gap: 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+#teams h2 {
+  font-size: 25pt;
+  margin-bottom: 10px;
+}
+#teams a {
+  margin-left: 0;
+}
+
+#teams img {
+  object-fit: cover;
+  width: 800px;
+  height: 400px;
+  border-radius: 20px;
+}
+
+/* RIDEFYSIOTERAPI */
+
+/*Hero billede*/
+#heroridefysioterapi {
+  background-image: url(images/heroridefysioterapi.jpg);
+  background-size: cover;
+  width: auto;
+  height: calc(100vh - 110px);
+}
+
+#herobox {
+  background-color: #fdf7f0;
+  justify-content: center;
+  position: absolute;
+  top: 500px;
+  right: 0;
+  width: 500px;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+#inforidefysioterapi {
+  display: flex;
+  justify-content: center;
+  background-color: #f3eee7;
+  height: 500px;
+}
+
+#ridefysioterapileft {
+  width: 25%;
+  margin-right: 100px;
+  margin-top: 50px;
+}
+
+#ridefysioterapiright {
+  margin-top: 50px;
+  width: 25%;
+  margin-left: 100px;
+}
+
+#tilmeldingridefysioterapi {
+  display: flex;
+  justify-content: center;
+}
+
+#tilmeldingridefysioterapileft {
+  width: 30%;
+  margin-right: 100px;
+  position: relative;
+  bottom: 100px;
+}
+
+#tilmeldingridefysioterapiright {
+  width: 30%;
+  margin-left: 100px;
+  padding-top: 100px;
+}
+
+#rundtbillede {
+  border-radius: 50%;
+  border: 8px solid #796b3f;
+}
+
+/* OM RIDESKOLEN */
+/* Historiesektionen */
+
+#history {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+}
+#history div {
+  width: 40%;
+}
+#history div h1 {
+  margin-bottom: 20px;
+  font-size: 30pt;
+  line-height: 40px;
+}
+#history img {
+  border-radius: 20px;
+}
+
+#history a {
+  color: #000;
+}
+#centersection {
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 25vw;
+}
+
+/* Faciliteter */
+
+#facilities {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f3eee7;
+  margin-top: 50px;
+  padding: 100px 0px 100px 0px;
+}
+
+#facilities hr {
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+#listfacilities {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: fit-content;
+}
+
+.listdirection {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.listdirection img {
+  position: relative;
+  top: 5px;
+  padding-right: 10px;
+}
+
+#splitsections {
+  overflow: hidden;
+  position: relative;
+  top: -5vw;
+}
+#splitsections img {
+  width: 102%;
+}
+
+/* Undervisning og aktiviteter */
+#activities {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 5vw;
+}
+
+#leftbox {
+  width: 70%;
+  padding-right: 50px;
+}
+#rightbox {
+  width: 70%;
+}
+
+/* --filter knap------------------------------------- */
+
+#filter-knap {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60px;
+  color: white;
+  background-color: #beac76;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: 5vh;
+  padding: 8px 30px;
+}
+
+.filter-category {
+  text-align: center;
+}
+
+.filter-cat-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background-color: #fdf7f0;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.111);
+}
+.filter-cat-title h1 {
+  font-size: 18pt;
+  font-weight: 600;
+}
+
+/* Category content */
+
+.filter-cat-content {
+  flex-direction: column;
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+.filter-cat-content div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 15pt;
+  background-color: #f3eee7;
+}
+.filter-cat-content div i {
+  right: 25px;
+}
+.filter-cat-content a {
+  padding: 25px;
+  font-weight: 100;
+  color: black;
+  text-decoration: none;
+  box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.111);
+}
+
+/* --HOLD STYLES------------------------------------- */
+
+#all-cards {
+  width: 90%;
+  margin: auto;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.hold-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 380px;
+  background-color: white;
+  width: 280px;
+  text-align: left;
+  border-radius: 20px;
+}
+
+.hold-card img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.hold-card h3 {
+  padding-left: 20px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5vh;
+  padding-left: 20px;
+}
+
+.content hr {
+  border: #796b3f solid 1.5px;
+  border-radius: 10px;
+  height: 100px;
+  align-self: center;
+}
+
+.content-right {
+  font-size: 10pt;
+  width: 50%;
+}
+.content-right p {
+  width: 80%;
+  margin: auto;
+  line-height: 15px;
+}
+
+.content-left-info {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+  height: 30px;
+}
+.content-left-info p {
+  font-size: 10pt;
+}
+
+.content-left-info i {
+  color: #554c2f;
+  font-size: 15pt;
+}
+.content-left-info .fa-user-group {
+  font-size: 13pt;
+}
+
+.tilmeld-cta {
+  text-align: center;
+  font-size: 15pt;
+  background-color: #beac76;
+  border-radius: 0px 0px 20px 20px;
+  padding: 10px;
+  transition: 0.05s ease-in-out;
+}
+.tilmeld-cta:hover {
+  background-color: #796b3f;
+}
+
+.tilmeld-cta {
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+}
+
+/* --FOOTER STYLES------------------------------------- */
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #7a6b3f;
+  color: #fdf7f0;
+  padding: 3vh 0vh 3vh 0vh;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+}
+
+footer div a {
+  text-decoration: none;
+  color: white;
+  transition: 0.1s ease-in-out;
+}
+
+footer h4 {
+  font-size: 15pt;
+  padding-bottom: 1vh;
+}
+
+#footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+#footer-links a:hover {
+  text-decoration: underline;
+}
+
+#footer-betingelser a {
+  color: #fdf7f0;
+}
+
+.footer-sociale {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  width: 7vw;
+  color: #fdf7f0;
+}
+
+.footer-sociale p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-sociale .fa-brands {
+  font-size: 20px;
+}
+
+/* ---------------- TILMELDING-------- */
+
+.step-1-3 {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.step-2 {
+  height: 500px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  background-color: #f3eee7;
+}
+
+.circle-step-1-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  font-size: 30pt;
+  color: #f3eee7;
+  text-align: center;
+  background-color: #796b3f;
+  transition: 0.1s ease-in-out;
+}
+.circle-step-1-3:hover,
+.circle-step-2:hover {
+  background-color: #554c2f;
+}
+
+.circle-step-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  font-size: 50px;
+  color: #f3eee7;
+  text-align: center;
+  background-color: #796b3f;
+  transition: 0.1s ease-in-out;
+}
+
+.circle-step-1-3 h1,
+.circle-step-2 h1 {
+  color: rgb(255, 255, 255);
+  font-size: 30pt;
+}
+
+.step-1-3-text {
+  z-index: 1;
+  width: 40%;
+  color: black;
+}
+
+.step-2-text {
+  z-index: 1;
+  width: 40%;
+  color: black;
+}
+
+.step-1-3-text h1,
+.step-2-text h1 {
+  color: rgb(0, 0, 0);
+  font-size: 16pt;
+}
+
+.step-1-3-text p,
+.step-2-text p {
+  font-size: 12pt;
+}
+
+/* De 3 heste i bunden */
+#horses {
+  display: block;
+  width: 70%;
+  margin: auto;
+}
+
+/* ---------------- 404 - side----------------- */
+
+.div-404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100dvh - 100px);
+  overflow: hidden;
+}
+
+.div-404 img {
+  width: 450px;
+}
+
+.text-404 h1 {
+  font-size: 35pt;
+}
+
+.text-404 p {
+  font-size: 14pt;
+}
+
+#cta-404 {
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+  background-color: #7a6b3f;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: 0.1s ease-in-out;
+  margin-top: 30px;
+}
+
+#cta-404:hover {
+  background-color: #554c2f;
+}
+
+/* ---------------- HESTENE / BESTYRELSE STYLES-------- */
+
+.content-container {
+  margin-bottom: 100px;
+}
+
+/* Test */
+#loginPanel {
+  color: #000;
+  cursor: pointer;
+}
+
+#userNav {
+  width: 200px;
+  height: 200px;
+  display: none;
+  background: #ff0000;
+}
+
+/* Overskrift */
+.hestene-bestyrelse-h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.hestene-bestyrelse-p {
+  text-align: center;
+  margin-bottom: 5vw;
+}
+
+/* Classen split-colored-div-1 er baggrunden for denne sektion.
+Vi skifter mellem brugen af classen split-colored-div-1 og split-colored-div-2, for
+nemt at kunne tilfølje flere heste*/
+.split-colored-div-1 {
+  background: linear-gradient(to right, #7a6b3f 0%, #7a6b3f 30%, #f3eee7 30%, #f3eee7 100%);
+  height: 30vw;
+}
+/* Classen split-colored-div-1-text bestemmer hvordan teksten skal
+forholde sig ift. resten af indholdet i div'en*/
+.split-colored-div-1-text {
+  margin-left: 45vw;
+  margin-top: -23vw;
+  z-index: 1;
+  max-width: 40vw;
+  color: black;
+}
+
+/* Titlen under bestyrelsesmedlemmernes navne */
+.bestyrelse-p-title {
+  font-style: italic;
+  font-size: 15pt;
+}
+
+/* Her bestemmes det hvordan billedet skal placeres */
+.split-colored-div-1 img {
+  height: 22vw;
+  width: 22vw;
+  margin-left: 19%;
+  margin-top: 4%;
+  margin-bottom: 2%;
+  z-index: +1;
+  border-radius: 10%;
+}
+
+/* Her beskriver vi hvordan split-colored-div-2 bruges. Kommandoerne er de samme,
+men værdierne er anderledes og tilpasset efter mockuppen */
+.split-colored-div-2 {
+  background: linear-gradient(to left, #7a6b3f 0%, #7a6b3f 30%, #fdf7f0 30%, #fdf7f0 100%);
+  height: 30vw;
+}
+
+.split-colored-div-2-text {
+  margin-left: 15vw;
+  margin-top: -23vw;
+  z-index: 1;
+  max-width: 40vw;
+  color: rgb(0, 0, 0);
+}
+
+.split-colored-div-2 img {
+  height: 22vw;
+  width: 22vw;
+  margin-left: 59%;
+  margin-top: 4%;
+  margin-bottom: 2%;
+  z-index: +1;
+  border-radius: 10%;
+}
+
+.fa-phone {
+  padding-left: 20px;
+  padding-right: 5px;
+}
+
+/* Media quiaries 1080px - IPad size*/
+@media screen and (max-width: 1080px) {
+  /* HEADER */
+  header {
+    display: none;
+  }
+  #mobile-header {
+    display: flex;
+  }
+  #mobile-dropsystem {
+    display: block;
+  }
+
+  /* FORSIDE */
+  #hero {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+  }
+  #overlay-box {
+    display: none;
+  }
+  #mobile-herotext {
+    display: block;
+  }
+  .cta {
+    margin: auto;
+    margin-top: 30px;
+  }
+  #teams {
+    flex-direction: column-reverse;
+    gap: 30px;
+    width: 85%;
+  }
+  #teams img {
+    width: 100%;
+  }
+
+  /* FOOTER */
+  footer {
+    flex-direction: column;
+  }
+  footer div {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  #footer-links {
+    margin: 0;
+  }
+
+  /* BESTYRELSEN OG HESTE SIDEN */
+
+  /* Overskrift på siden */
+  .hestene-bestyrelse-h1 {
+    font-size: 18pt;
+  }
+
+  .hestene-bestyrelse-p {
+    font-size: 10pt;
+  }
+
+  /* Tekster på siden */
+  .split-colored-div-1-text p {
+    font-size: 12pt;
+  }
+
+  .split-colored-div-2-text p {
+    font-size: 12pt;
+  }
+
+  .split-colored-div-1-text h1 {
+    font-size: 12pt;
+  }
+
+  .split-colored-div-2-text h1 {
+    font-size: 12pt;
+  }
+
+  /* Bestyrelsens titler */
+  .bestyrelse-p-title {
+    font-size: 10pt;
+  }
+
+  /* RIDEFYSIOTERAPI*/
+
+  #heroridefysioterapi {
+    height: 50vw;
+    top: 200px;
+  }
+
+  #herobox {
+    top: 350px;
+  }
+
+  #rundtbillede {
+    height: 350px;
+  }
+
+  #tilmeldingridefysioterapiright {
+    padding-top: 20px;
+  }
+
+  #ridefysioterapileft {
+    width: 50%;
+    margin-left: 100px;
+  }
+
+  #ridefysioterapiright {
+    width: 40%;
+    margin-right: 100px;
+  }
+
+  #tilmeldingridefysioterapileft {
+    bottom: 50px;
+  }
+
+  /* -------------- TILMELDING -------- */
+  .step-1-3 {
+    height: 100%;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .step-2 {
+    height: 100%;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .step-1-3-text {
+    width: 80%;
+  }
+  .step-2-text {
+    width: 80%;
+  }
+  .circle-step-1-3 {
+    width: 250px;
+    height: 250px;
+  }
+  .circle-step-2 {
+    width: 250px;
+    height: 250px;
+  }
+  #horses {
+    width: 90%;
+  }
+
+  /* 404 Page */
+  .div-404 {
+    flex-direction: column;
+    text-align: center;
+  }
+  .div-404 img {
+    width: 320px;
+  }
+
+  /* ABOUT PAGE */
+
+  #history {
+    margin-top: 50px;
+    width: 85%;
+    flex-direction: column;
+  }
+  #history div {
+    width: 100%;
+  }
+  #history div h1 {
+    margin-bottom: 20px;
+    font-size: 22pt;
+    line-height: 40px;
+  }
+  #history img {
+    margin-top: 30px;
+    border-radius: 20px;
+  }
+
+  #history a {
+    color: #000;
+  }
+
+  #facilities {
+    flex-direction: column;
+    padding: 50px 0px 50px 0px;
+  }
+
+  #facilities h1 {
+    margin-bottom: 20px;
+  }
+
+  #facilities hr {
+    display: none;
+  }
+
+  #listfacilities {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  #activities {
+    flex-direction: column;
+    gap: 50px;
+    width: 85%;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+  #activities h2 {
+    margin-bottom: 20px;
+  }
+
+  #leftbox {
+    width: 100%;
+    padding-right: 50px;
+  }
+  #rightbox {
+    width: 100%;
+  }
+}
+
+/* Media queries 570px */
+@media screen and (max-width: 570px) {
+  /* -------------- TILMELDING -------- */
+  /* Igen ændringer */
+
+  /* BESTYRELSEN OG HESTENE SIDER */
+  /* Overskrift på siden */
+  .hestene-bestyrelse-h1 {
+    font-size: 20pt;
+  }
+
+  .hestene-bestyrelse-p {
+    font-size: 12pt;
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
+
+  /* Baggrundsfarve ændres */
+  .split-colored-div-1 {
+    background: linear-gradient(to right, #7a6b3f 0%, #7a6b3f 25%, #f3eee7 25%, #f3eee7 100%);
+    height: 60vw;
+  }
+
+  /* Baggrundsfarve ændres */
+  .split-colored-div-2 {
+    height: 60vw;
+  }
+
+  /* Billede ændres */
+  .split-colored-div-1 img {
+    height: 35vw;
+    width: 35vw;
+    margin-left: 8%;
+    margin-top: 12%;
+  }
+
+  .split-colored-div-2 img {
+    height: 35vw;
+    width: 35vw;
+    margin-left: 53%;
+    margin-top: 12%;
+  }
+
+  /* Tekster på siden */
+  .split-colored-div-1-text p {
+    font-size: 8pt;
+    margin-top: 5vw;
+    margin-left: 2vw;
+    margin-right: -10vw;
+  }
+
+  .split-colored-div-2-text p {
+    font-size: 8pt;
+    margin-top: 5vw;
+    margin-right: 2vw;
+    margin-left: -10vw;
+  }
+
+  .split-colored-div-1-text h1 {
+    font-size: 12pt;
+    margin-top: -40vw;
+    margin-bottom: -5vw;
+    margin-left: 2vw;
+    margin-right: -10vw;
+  }
+
+  .split-colored-div-2-text h1 {
+    font-size: 12pt;
+    margin-top: -40vw;
+    margin-bottom: -5vw;
+    margin-right: 2vw;
+    margin-left: -10vw;
+  }
+
+  /* Bestyrelsens titler */
+  .bestyrelse-p-title {
+    font-size: 6pt;
+    margin-bottom: -4vw;
+  }
+
+  /* Retning ændres på info omkring ridefysioterapi*/
+  #inforidefysioterapi {
+    flex-direction: column;
+    height: 600px;
+  }
+
+  #ridefysioterapileft {
+    width: 80%;
+    margin: auto;
+    padding-top: 5vw;
+  }
+
+  #ridefysioterapiright {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 15vw;
+  }
+
+  /* Retning ændres på tilmelding til ridefysioterapi*/
+
+  #heroridefysioterapi {
+    height: 70vw;
+    top: 300px;
+  }
+
+  #herobox {
+    top: 250px;
+    width: 65%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #tilmeldingridefysioterapi {
+    flex-direction: column;
+  }
+  #rundtbillede {
+    height: 300px;
+    position: relative;
+    bottom: 50px;
+  }
+
+  #ridefysioterapileft {
+    margin-top: 30px;
+  }
+
+  #ridefysioterapiright {
+    margin-top: 15px;
+  }
+
+  #inforidefysioterapi {
+    height: 700px;
+  }
+
+  #tilmeldingridefysioterapileft {
+    width: 90%;
+    margin: auto;
+    margin-right: 0px;
+    position: static;
+    bottom: 50px;
+  }
+
+  #tilmeldingridefysioterapiright {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 20px;
+    padding-top: 0px;
+  }
+}
